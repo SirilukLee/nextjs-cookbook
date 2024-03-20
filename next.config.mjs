@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   styledComponents: true,
-  pageExtenstons: ['page.tsx', 'page.ts', 'page.jsx', 'page.js', 'api.ts', 'api.js' ],
+  // pageExtensions: ['page.tsx', 'page.ts', 'page.jsx', 'page.js', 'api.ts', 'api.js' ],
   // locales:['en', 'de'],
   // defaultLocale: 'en',
   // webpack: (config, { buildld, dev, isServer, defaultLoaders, webpack }) => {

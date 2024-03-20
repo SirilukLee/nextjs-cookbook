@@ -1,4 +1,4 @@
-import styles from "../../styles/atoms.module.scss"
+import styles from "../../styles/Atoms.module.scss"
 import { IDate } from "../ui-types"
 
 const ArticleDate = ({date}: IDate) => {

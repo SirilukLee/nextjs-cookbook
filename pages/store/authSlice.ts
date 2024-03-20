@@ -18,9 +18,6 @@ export type selectAuth = {
     isLoggedIn: boolean
 }
 
-// export type selectAuthState = {
-//     selectAuth: SelectAuth
-// }
 
 export const INITIAL_STATE: AuthState = {
     auth: {
@@ -31,11 +28,6 @@ export const INITIAL_STATE: AuthState = {
 
 }
 
-// export const INITIAL_SELECT_AUTH_STATE: selectAuthState = {
-//     selectAuth: {
-//         isLoggedIn: false
-//     }
-// }
 
 export const authSlice = createSlice({
     name: "auth",
@@ -50,9 +42,13 @@ export const authSlice = createSlice({
     initialState: INITIAL_STATE
 })
 
+export const selectAuthState = (state: RootState) => {
+    return state.auth.isLoggedIn;
+}
+
 export default authSlice.reducer
 export const { changeAuthState } = authSlice.actions;
-export const selectAuthState = createSelector(
-    (state: AppState) => state.auth.auth.isLoggedIn,
-    (isLoggedIn) => isLoggedIn
-  );
+// export const selectAuthState = createSelector(
+//     (state: AppState) => state.auth.auth.isLoggedIn,
+//     (isLoggedIn) => isLoggedIn
+//   );
