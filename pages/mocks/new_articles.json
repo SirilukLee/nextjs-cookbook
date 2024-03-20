@@ -1,0 +1,47 @@
+[
+    {
+        "id": 1,
+        "title": "Breakfast burger1",
+        "author": "John Wik",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ullamcorper bibendum sollicitudin. Sed molestie non magna ut lobortis. Nunc pretium urna nec bibendum sagittis.Cras neque massa, ultricies eget mollis ut, lacinia vitae velit. Suspendisse turpis neque,",
+        "burger": "hamburger",
+        "category": {
+            "title": "Breakfast food",
+            "url": "/categories/breakfast"
+        },
+        "image": "shorturl.at/hluIO",
+        "publishingDate": "2022-05-01",
+        "allowComments": true,
+        "status": "public"
+    },
+    {
+        "id": 2,
+        "title": "Breakfast burger2",
+        "author": "John Wik",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ullamcorper bibendum sollicitudin. Sed molestie non magna ut lobortis. Nunc pretium urna nec bibendum sagittis.Cras neque massa, ultricies eget mollis ut, lacinia vitae velit. Suspendisse turpis neque,",
+        "burger": "hamburger",
+        "category": {
+            "title": "Breakfast food",
+            "url": "/categories/breakfast"
+        },
+        "image": "shorturl.at/hluIO",
+        "publishingDate": "2022-05-01",
+        "allowComments": true,
+        "status": "public"
+    },
+    {
+        "id": 3,
+        "title": "Breakfast burger3",
+        "author": "John Wik",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ullamcorper bibendum sollicitudin. Sed molestie non magna ut lobortis. Nunc pretium urna nec bibendum sagittis.Cras neque massa, ultricies eget mollis ut, lacinia vitae velit. Suspendisse turpis neque,",
+        "burger": "hamburger",
+        "category": {
+            "title": "Breakfast food",
+            "url": "/categories/breakfast"
+        },
+        "image": "shorturl.at/hluIO",
+        "publishingDate": "2022-05-01",
+        "allowComments": true,
+        "status": "public"
+    }
+]

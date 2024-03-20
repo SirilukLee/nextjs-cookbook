@@ -18,6 +18,7 @@ export interface IArticle {
     status: 'public' | 'draft'
 }
 
+
 class ArticleDataService {
     private static instance: ArticleDataService;
     private constructor() { }

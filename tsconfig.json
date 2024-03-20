@@ -14,8 +14,8 @@
     "incremental": true,
     "paths": {
       "@/*": ["./*"]
-    }
+    },
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "__tests__/ui.test.jsx", "__tests__/ui.test.jsx", "__tests__/ui.test.jsx"],
   "exclude": ["node_modules"]
 }

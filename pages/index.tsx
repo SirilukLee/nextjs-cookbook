@@ -6,7 +6,7 @@ import { BurgerBuilder} from './core/burger-builder'
 import { IStrategy, Kitchen } from './core/burger-strategy'
 import { StrategiesNames, Strategies } from './core/burger-config'
 
-const Recipe = () => {
+const Recipe = ({ initialData }: { initialData: Partial<any> }) => {
     const router = useRouter()
     const [content, setContent] = useState<IArticle>({} as IArticle);
     const { recipes, comment_page } = router.query
@@ -47,17 +47,16 @@ const Recipe = () => {
         console.log("getting the recipe", burgerBuilder.getRecipe())
     },[])
 
-    useMemo(() => { 
-      if(Object.keys(content).length > 0) {
-      console.log("content.burger", content.burger)
-      // we do not use this variables as state of the component as we do not need to see
-      // Changes of them in the template. Only the content variable will matters in this example
-      burgerType = Strategies[content.burger as StrategiesNames]
+    // useMemo(() => { 
+    //   if(Object.keys(content).length > 0) {
+    //   console.log("content.burger", content.burger)
+
+    //   burgerType = Strategies[content.burger as StrategiesNames]
      
-      context = new Kitchen(burgerType)
-      context.bakeSomething(burgerBuilder, burgerDirector)
-      }
-      }, [content])
+    //   context = new Kitchen(burgerType)
+    //   context.bakeSomething(burgerBuilder, burgerDirector)
+    //   }
+    //   }, [content])
       
 
     // useEffect(() => {
@@ -76,7 +75,7 @@ const Recipe = () => {
 
     return (
         <>
-        <div>hi</div>
+        {/* <div>hi</div> */}
         </>
         // <div>
         //     Recipe: in
@@ -92,9 +91,9 @@ const Recipe = () => {
     )
 }
 
-// Recipe.getInitialProps = () => {
-//     const initialData = 'data on load' + Math.random()
-//     return {initialData}
-// }
+Recipe.getInitialProps = () => {
+    const initialData = 'data on load' + Math.random()
+    return {initialData}
+}
 
 export default Recipe
