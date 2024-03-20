@@ -1,3 +1,5 @@
+import { MakeChickenburger, MakeHamburger } from "./burger-strategy"
+
 enum BurgerSteps {
 
     TOP_BUNS_WITH_SEEDS = "backingTopBunsPartWithSeeds",
@@ -12,4 +14,14 @@ enum BurgerSteps {
     GRILL_BURGER_WITH_CHEESE = "grillBurgerWithCheese"
 }
 
-export { BurgerSteps }
+enum StrategiesNames {
+    HAMBURGER = "hamburger",
+    CHICKENBURGER = "chickenburger"
+}
+
+const Strategies = {
+    [StrategiesNames.HAMBURGER] : new MakeHamburger(),
+    [StrategiesNames.CHICKENBURGER] : new MakeChickenburger()
+}
+
+export { BurgerSteps, StrategiesNames , Strategies}
