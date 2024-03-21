@@ -1,11 +1,7 @@
-import { PayloadAction, createSlice, ThunkAction, createSelector } from "@reduxjs/toolkit"
-//import { RootState } from "@reduxjs/toolkit/query";
-import { defaultTypeResolver } from "graphql";
-import { RootState } from "./index"
-import { AppState } from "./index";
+import { PayloadAction, createSelector, createSlice } from "@reduxjs/toolkit"
 
 export type Auth = {
-    isLoggedIn: boolean;
+    state: boolean;
     token: string | null
     userProperties: Array<string>
 }
@@ -15,13 +11,13 @@ export type AuthState = {
 }
 
 export type selectAuth = {
-    isLoggedIn: boolean
+    state: boolean
 }
 
 
 export const INITIAL_STATE: AuthState = {
     auth: {
-        isLoggedIn: false,
+        state: false,
         token: null,
         userProperties: []
     },
@@ -35,6 +31,7 @@ export const authSlice = createSlice({
         changeAuthState: (state: AuthState, action: PayloadAction<Auth>) => {
             const newAuth = action.payload;
             state.auth = newAuth
+            console.log(state.auth)
 
         },
 
@@ -42,13 +39,16 @@ export const authSlice = createSlice({
     initialState: INITIAL_STATE
 })
 
-export const selectAuthState = (state: RootState) => {
-    return state.auth.isLoggedIn;
-}
+// export const selectAuthState = (state :any) => {
+//     console.log(state.auth.auth.state)
+//     return state.auth.auth.state;
+// }
 
 export default authSlice.reducer
 export const { changeAuthState } = authSlice.actions;
-// export const selectAuthState = createSelector(
-//     (state: AppState) => state.auth.auth.isLoggedIn,
-//     (isLoggedIn) => isLoggedIn
-//   );
+
+export const selectAuthState = createSelector(
+    state => state.auth,
+    auth => auth
+    
+);

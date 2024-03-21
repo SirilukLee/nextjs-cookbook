@@ -27,7 +27,9 @@ export default function CookBook({ Component, pageProps }: AppProps) {
 
   useEffect(() => {
     const authFromStorage = getFromStorageByKey(LocalStorageKeys.LOGIN)
+   
     if (authFromStorage) {
+      console.log(authFromStorage)
       store.dispatch(changeAuthState(authFromStorage));
     }
 

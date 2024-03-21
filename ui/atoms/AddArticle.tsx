@@ -13,9 +13,7 @@ import ArticleModalCloseButton from "./ArticleModalCloseButton";
 const AddArticleButton = ({ openModal }: IAddArticleButton) => {
     const [buttonLabel, setButtonState] = useState(Labels.SUBMIT);
     const [showModal, setModalState] = useState(false);
-   // const isLoggedIn = useAppSelector(selectAuthState)
-   const isLoggedIn = true
-    console.log(isLoggedIn)
+    const isLoggedIn = useAppSelector(selectAuthState).auth.state
 
     const dispatch = UseAppDisPatch();
 

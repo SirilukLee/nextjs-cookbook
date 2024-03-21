@@ -5,15 +5,14 @@ import ArticleDate from "@/ui/atoms/ArticleDate";
 import ArticleText from "@/ui/atoms/ArticleText";
 import DeleteArticleButton from "@/ui/atoms/DeleteArticle";
 import EditArticleButton from "@/ui/atoms/EditArticle";
-//import { selectAuthState } from  "../store/authSlice";
+import { selectAuthState } from  "../store/authSlice";
 import styles from "../../styles/Article.module.scss";
 import BackToListButton from "../../ui/atoms/BackToList";
 import { useRouter } from 'next/router';
 import ArticleTitle from "@/ui/atoms/ArticleTitle";
 
 const ArticlePage: NextPage = ({ data, notFound }: any) => {
-    // const isLoggedIn = useSelector(selectAuthState);
-    const isLoggedIn = true;
+    const isLoggedIn = useSelector(selectAuthState);
     const router = useRouter();
     const routeBack = () => {
         router.push('/articles')
@@ -28,9 +27,9 @@ const ArticlePage: NextPage = ({ data, notFound }: any) => {
                         <ArticleTitle title={data.title} isEdit={false} />
                     </h1>
                 </div>
-                <p>
+                <div>
                     <ArticleText text={data.content} isEdit={false} />
-                </p>
+                </div>
                 <div>
                     <ArticleDate date={data.createdAt} />
                 </div>

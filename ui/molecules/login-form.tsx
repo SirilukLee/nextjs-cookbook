@@ -22,7 +22,7 @@ const LoginForm = () => {
         const loginState = await loginService.login(login, password)
         dispatch(changeAuthState(loginState))
         console.log("loginState", loginState)
-        if (loginState.isLoggedIn) {
+        if (loginState.state) {
             router.push('/articles')
         }
     }

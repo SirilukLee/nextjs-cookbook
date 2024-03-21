@@ -1,13 +1,13 @@
 import type { NextPage } from 'next'
 import ArticleListElement from '@/ui/molecules/ArticleListElement'
 import { Fragment } from 'react'
-//import { selectAuthState } from '../store/authSlice'
+import { selectAuthState } from '../store/authSlice'
 import { useAppSelector } from '../hooks'
 import { IListPage } from '@/ui/ui-types'
 import axios from 'axios'
 
 const ListPage: NextPage = ({ data, notFound }: IListPage) => {
-    // const isLoggedIn = useAppSelector(selectAuthState);
+    const isLoggedIn = useAppSelector(selectAuthState).auth.state;
 
 
     return (
@@ -17,7 +17,7 @@ const ListPage: NextPage = ({ data, notFound }: IListPage) => {
                 data?.map((item: any) => {
                     return (
                         <Fragment key={item.id}>
-                            <ArticleListElement isLoggedIn={true}
+                            <ArticleListElement isLoggedIn={isLoggedIn}
                                 article={item}
                             />
                         </Fragment>

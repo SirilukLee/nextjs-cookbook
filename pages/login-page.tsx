@@ -12,7 +12,7 @@ const LoginPage: NextPage = () => {
                 <LoginForm />
             </Provider>
 
-            <Link href="/">Main</Link>
+            {/* <Link href="/">Main</Link> */}
         </article>
 
     )

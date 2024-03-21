@@ -11,7 +11,7 @@ class LoginService {
     private isLoggedIn: boolean = false
     private token: string = ''
     private applicationUser: ApplicationUser = {} as ApplicationUser
-    private loginState: IUser | null = null
+    // private loginState: IUser | null = null
     private constructor() { }
 
     public static getInstance(): LoginService {
@@ -25,22 +25,23 @@ class LoginService {
 
 
     async login(user: string, password: string) {
+        console.log(user, password)
         const loginContext = new LoginContext(loginType)
-        //console.log('loginContext',loginContext)
-        const loginState =  await loginContext.useLogin(user, password)
+        console.log('loginContext', loginContext)
+        const loginState = await loginContext.useLogin(user, password)
         console.log('loginState', loginState)
-        this.isLoggedIn = loginState.isLoggedIn;
+        this.isLoggedIn = loginState.state;
         this.applicationUser = new ApplicationUser(loginState)
-        //console.log(this.applicationUser)
         loginState.userProperties.forEach((property: keyof typeof UserBuilderMethod) => {
-         UserBuilderMethod[property] && this.applicationUser[UserBuilderMethod[property]]()
+            UserBuilderMethod[property] && this.applicationUser[UserBuilderMethod[property]]()
         })
 
         this.token = loginState.token;
-    
-        updateStorage(LocalStorageKeys.LOGIN, JSON.stringify(loginState) )
 
-        return loginState
+        updateStorage(LocalStorageKeys.LOGIN, JSON.stringify(loginState))
+
+         return loginState
+        //return { isLoggedIn: this.isLoggedIn, token: this.token, applicationUser: this.applicationUser };
     }
 
     getLoginStatus() {

@@ -9,6 +9,8 @@
     transition: 0.1s;
     margin: 0.2rem;
     position: relative;
+    color: white;
+    text-decoration: none;
 
     &:active {
         border-bottom: 1px solid $gray;
@@ -16,6 +18,7 @@
         bottom: -2px;
     }
 }
+
 
 .dates {
     color: $gray;
@@ -92,16 +95,19 @@
 .link {
     font-size: 1em;
     color: $gray;
+    text-decoration: none;
 }
 
 .nav {
     display: flex;
     align-items: center;
+    justify-content: space-between;
 
     div {
         display: flex;
         align-items: center;
         padding: 1rem;
+        text-decoration: none;
     }
 
     div:last-child .separator {
@@ -153,4 +159,3 @@
         }
     }
 }
-

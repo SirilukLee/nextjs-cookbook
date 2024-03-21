@@ -13,16 +13,19 @@ const LoginForm = () => {
     const [login, setLogin] = useState('');
     const [password, setPassword] = useState('')
     const router = useRouter();
-
+ 
     const dispatch = UseAppDisPatch();
     const loginService = LoginService.getInstance()
+    console.log(loginService)
     const loginAction = async (event: FormEvent<HTMLFormElement>) => {
         console.log('login');
         event.preventDefault();
+        console.log(login, password)
         const loginState = await loginService.login(login, password)
+         console.log(loginState)
         dispatch(changeAuthState(loginState))
         console.log("loginState", loginState)
-        if (loginState.isLoggedIn) {
+        if (loginState.state) {
             router.push('/articles')
         }
     }
