@@ -13,8 +13,9 @@ import ArticleModalCloseButton from "./ArticleModalCloseButton";
 const AddArticleButton = ({ openModal }: IAddArticleButton) => {
     const [buttonLabel, setButtonState] = useState(Labels.SUBMIT);
     const [showModal, setModalState] = useState(false);
-    const isLoggedIn = useAppSelector(selectAuthState).auth.state
-
+    const isLoggedIn = useAppSelector(selectAuthState)
+     // console.log(JSON.parse(isLoggedIn))
+     //const authDataAsString: string = JSON.stringify(authData);
     const dispatch = UseAppDisPatch();
 
     const newArticle = {
@@ -34,7 +35,7 @@ const AddArticleButton = ({ openModal }: IAddArticleButton) => {
         if (isLoggedIn) {
             setButtonState(Labels.ADD_ARTICLE)
         }
-        dispatch(changeArticleState(newArticle));
+         dispatch(changeArticleState(newArticle));
     }, [newArticle]);
 
 
@@ -43,7 +44,7 @@ const AddArticleButton = ({ openModal }: IAddArticleButton) => {
         <>
             {isLoggedIn &&
                 <button className={styles.blueButton}
-                    type="button" onClick={() => openModal()}>
+                    type="button" onClick={() => setModalState(true)}>
                     {Labels.ADD_ARTICLE}
                 </button  >
             }

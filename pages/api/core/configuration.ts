@@ -24,9 +24,9 @@ const LoginStrategies = {
 
 //const currentLoginStrategy = LoginStrategies[LoginStrategiesNames.AMPLIFY]
 
-//const loginType = LoginStrategies[LoginStrategiesNames.GQL]
+const loginType = LoginStrategies[LoginStrategiesNames.GQL]
 
-const loginType = LoginStrategies[LoginStrategiesNames.MOCK]
+//const loginType = LoginStrategies[LoginStrategiesNames.MOCK]
 
 
 

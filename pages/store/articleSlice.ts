@@ -25,6 +25,7 @@ const articleSlice = createSlice({
         changeArticleState: ( state: RootState, action: PayloadAction<ArticleState>) => {
             const newArticleState = action.payload;
             state = {...newArticleState}
+           
             return state;
         }
     },

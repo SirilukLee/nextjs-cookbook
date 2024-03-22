@@ -6,12 +6,14 @@ import { useQuery, gql } from '@apollo/client';
 
 
 class LoginContext {
-    private strategy: ILoginStrategy;
+    private strategy: ILoginStrategy | ILoginStrategyGQL ;
 
-    constructor(strategy: ILoginStrategy) {
+    constructor(strategy: ILoginStrategy | ILoginStrategyGQL) {
         console.log('Login strategy class is', strategy)
         this.strategy = strategy
     }
+
+
 
     public useLogin(user: string, password: string) {
         console.log('Now login is on fire')
@@ -32,50 +34,36 @@ class LoginWithMock implements ILoginStrategy {
         }
 
         return loginState;
-        // return new Promise<IUser>((resolve, reject) => {
-        //     const users = getMock.users
-        //     const checkUser = users.find((userItem: { user: string, password: string }) => {
-        //         return userItem.user === user && userItem.password === password
-        //     })
-        //     let loginState = { state: false, token: '', userProperties: [] }
-        //     if (checkUser) {
-        //         const loginState = { state: true, token: generateToken(), userProperties: [] };
-                
-        //     }
-        // });
+
     }
 }
 
 
 class LoginWithGQL implements ILoginStrategyGQL {
     async gqlLogin(user: string, password: string) {
-        // console.log(client)
+        
         const { data } = await client.query({
             query: gql`
             query {
-                getUser(user: "${user}", pasword: "${password}") {
+                getUser(user: "${user}", password: "${password}") {
                     user
                     userProperties
                 }
             }
             `
         });
+        
         return await data
     }
     public async login(user: string, password: string) {
+        console.log(user , password)
         let loginState = {state: false, token: '', userProperties:[]}
         const checkUser = await this.gqlLogin(user,password)
+        console.log(checkUser)
         if (checkUser && checkUser.getUser) {
             loginState =  { state: true, token: generateToken(), userProperties: checkUser.getUser.userProperties}
         }
         return loginState
-        // return new Promise <IUser>(async (resolve, reject) => {
-        //     let loginState = { state: false, token: '', userProperties: [] }
-        //     const checkUser = await this.gqlLogin(user, password)
-        //     if (checkUser && checkUser.getUser) {
-        //         loginState = { state: true, token: generateToken(), userProperties: checkUser.getUser.userProperties }
-        //     }
-        // })
 
     }
 }

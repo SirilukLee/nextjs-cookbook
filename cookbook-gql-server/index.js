@@ -1,6 +1,6 @@
 const { ApolloServer, gql } = require('apollo-server');
 const users = require('../pages/mocks/users.json')
-//console.log(users)
+console.log(users)
 const typeDefs = gql`
 type User {
     user: String!
@@ -16,7 +16,8 @@ type Query {
 const resolvers = {
     Query: {
         getUser: (obj, params) => {
-            return users.find(user => users.user === params.user && user.password === params.password)
+            console.log(params)
+            return users.find(user => user.user === params.user && user.password === params.password)
         }
     },
 };
@@ -29,7 +30,10 @@ const server = new ApolloServer({
     typeDefs,
     resolvers,
     csrfPrevention: true,
-    cache: 'bounded'
+    cache: 'bounded',
+    plugins: [
+        ApolloServerPluginLandingPageLocalDefault({ embed: true})
+    ]
 });
 
 server.listen().then(({url})=>{

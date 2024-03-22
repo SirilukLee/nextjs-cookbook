@@ -28,10 +28,10 @@ const ArticlePage: NextPage = ({ data, notFound }: any) => {
                     </h1>
                 </div>
                 <div>
-                    <ArticleText text={data.content} isEdit={false} />
+                    <ArticleText text={data.text} isEdit={false} />
                 </div>
                 <div>
-                    <ArticleDate date={data.createdAt} />
+                    <ArticleDate date={data.publishingDate} />
                 </div>
             </div>
             {

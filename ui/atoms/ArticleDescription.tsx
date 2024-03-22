@@ -11,7 +11,8 @@ const AritcleDescription = ({ description, isEdit }: { description: string, isEd
     
     const onChangeHandler = (event: Partial<any>) => {
         const value = event?.target.value;
-        dispatch(changeArticleState({...currentArticle,description}))
+        setValue(value)
+        dispatch(changeArticleState({...currentArticle,description:value}))
 
     }
 

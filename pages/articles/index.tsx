@@ -7,7 +7,7 @@ import { IListPage } from '@/ui/ui-types'
 import axios from 'axios'
 
 const ListPage: NextPage = ({ data, notFound }: IListPage) => {
-    const isLoggedIn = useAppSelector(selectAuthState).auth.state;
+    const isLoggedIn = useAppSelector(selectAuthState);
 
 
     return (

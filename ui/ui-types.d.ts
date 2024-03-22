@@ -1,4 +1,3 @@
-//import { IArticle } from "@/pages/core/articles-data.service"
 export interface IArticle {
     id: number
     title:string
@@ -7,8 +6,6 @@ export interface IArticle {
     publishingDate: string
     isNew : boolean
 }
-
-
 
 export interface IAddArticleButton {
     openModal: () => void

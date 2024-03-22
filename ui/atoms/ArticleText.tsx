@@ -5,13 +5,14 @@ import { changeArticleState, selectArticleState } from '@/pages/store/articleSli
 import { UseAppDisPatch } from '@/pages/hooks';
 
 const ArticleText = ({ text, isEdit }: { text: string, isEdit: boolean }) => {
+   
     const [value, setValue] = useState(text)
     const currentArticle = useSelector(selectArticleState);
     const dispatch = UseAppDisPatch();
-    
     const onChangeHandler = (event: Partial<any>) => {
         const value = event.target.value;
-        dispatch(changeArticleState({...currentArticle,text}))
+        setValue(value)
+        dispatch(changeArticleState({...currentArticle,text:value}))
     }
 
     return (

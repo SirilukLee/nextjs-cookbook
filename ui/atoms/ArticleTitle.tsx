@@ -3,17 +3,20 @@ import styles from "../../styles/Atoms.module.scss"
 import { useSelector } from "react-redux"
 import { changeArticleState, selectArticleState } from "@/pages/store/articleSlice"
 import { UseAppDisPatch } from "@/pages/hooks"
+import { setDefaultAutoSelectFamily } from "net"
 
 const ArticleTitle = ({ title, isEdit }: { title: string, isEdit: boolean }) => {
+
     const [value, setValue] = useState(title)
     const currentArticle = useSelector(selectArticleState);
     const dispatch = UseAppDisPatch();
 
     const onChangeHandler = (event: Partial<any>) => {
         const value = event?.target.value;
-        dispatch(changeArticleState({...currentArticle,title}))
+        setValue(value)
+        dispatch(changeArticleState({...currentArticle, title:value}))
+       
     }
-
 
     return (
         <div className={styles.input}>
