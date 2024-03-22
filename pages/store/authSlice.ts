@@ -47,5 +47,6 @@ export const { changeAuthState } = authSlice.actions;
 
 export const selectAuthState = (state: AuthState) => {
     const authData = state.auth
+    
     return state.auth;
 }
