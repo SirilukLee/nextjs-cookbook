@@ -30,7 +30,7 @@ const NavigationBar = ({ navigation }: INavigationParams) => {
             </div>
 
 
-            <div>
+            <div id="add">
                 <AddArticleButton openModal={() => { }} />
             </div>
         </nav>

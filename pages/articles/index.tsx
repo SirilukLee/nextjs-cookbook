@@ -1,5 +1,5 @@
 import type { NextPage } from 'next'
-import ArticleListElement from '@/ui/molecules/ArticleListElement'
+import ArticleListElement from '../../ui/molecules/ArticleListElement'
 import { Fragment } from 'react'
 import { selectAuthState } from '../store/authSlice'
 import { useAppSelector } from '../hooks'
@@ -12,7 +12,7 @@ const ListPage: NextPage = ({ data, notFound }: IListPage) => {
 
     return (
         <section>
-            <h1>Article list</h1>
+            <h1>Articles list</h1>
             {
                 data?.map((item: any) => {
                     return (

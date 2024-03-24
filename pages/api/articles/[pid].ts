@@ -7,5 +7,5 @@ export default function handler (
 ) {
     console.log(req.query)
     const { pid } = req.query
-    res.status(200).json(getMock.new_articles[Number(pid)-1])
+    res.status(200).json(getMock.new_articles[Number(pid)])
 }

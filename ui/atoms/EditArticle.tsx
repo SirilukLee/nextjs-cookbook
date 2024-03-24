@@ -4,7 +4,7 @@ import styles from '../../styles/Atoms.module.scss';
 import { IArticleActions,IArticle  } from "../ui-types";
 import ArticleEdit from '../molecules/ArticleEdit'
 import ArticleModalCloseButton from './ArticleModalCloseButton';
-import { UseAppDisPatch, useAppSelector } from "@/pages/hooks";
+import { UseAppDisPatch, useAppSelector } from "../../pages/hooks";
 import { changeArticleState } from '@/pages/store/articleSlice';
 
 const EditArticleButton = ({ editArticle, article }: { editArticle: () => void, article: IArticle }) => {
@@ -12,11 +12,8 @@ const EditArticleButton = ({ editArticle, article }: { editArticle: () => void, 
     const dispatch = UseAppDisPatch();
 
     const saveArticle = async () => {
-     //  dispatch(changeArticleState({...article, save:true}))
-    }
-
-    const apiCallMiddleware = (store: any) => (next:any)=>(action:any)=>{
-
+        console.log(article)
+      dispatch(changeArticleState({...article, save:true}))
     }
 
     return (

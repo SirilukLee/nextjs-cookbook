@@ -1,9 +1,9 @@
 import { useState } from "react"
 import styles from "../../styles/Atoms.module.scss"
 import { useSelector } from "react-redux"
-import { changeArticleState, selectArticleState } from "@/pages/store/articleSlice"
-import { UseAppDisPatch } from "@/pages/hooks"
-import { setDefaultAutoSelectFamily } from "net"
+import { changeArticleState, selectArticleState } from "../../pages/store/articleSlice"
+import { UseAppDisPatch } from "../../pages/hooks"
+
 
 const ArticleTitle = ({ title, isEdit }: { title: string, isEdit: boolean }) => {
 

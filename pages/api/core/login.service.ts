@@ -52,6 +52,10 @@ class LoginService {
         return this.token
     }
 
+    anyAPICall() {
+        console.log('here we can call an API')
+    }
+
 }
 
 export { LoginService }

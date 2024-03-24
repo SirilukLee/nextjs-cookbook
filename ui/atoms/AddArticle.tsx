@@ -1,8 +1,8 @@
 
 import { useEffect, useState } from "react";
 import { IAddArticleButton, IArticle } from "../ui-types";
-import { Labels } from "@/pages/core/configs";
-import { UseAppDisPatch, useAppSelector } from "@/pages/hooks";
+import { Labels , LocalStorageKeys} from "@/pages/core/configs";
+import { useAppSelector ,UseAppDisPatch} from "@/pages/hooks";
 import { selectAuthState } from "../../pages/store/authSlice"
 import styles from "../../styles/Atoms.module.scss"
 import Link from "next/link";
@@ -14,9 +14,10 @@ const AddArticleButton = ({ openModal }: IAddArticleButton) => {
     const [buttonLabel, setButtonState] = useState(Labels.SUBMIT);
     const [showModal, setModalState] = useState(false);
     const isLoggedIn = useAppSelector(selectAuthState)
-    // console.log(JSON.parse(isLoggedIn))
+    console.log(isLoggedIn)
+    // const isLoggedIn = true
     // const authDataAsString: string = JSON.stringify(authData);
-    const dispatch = UseAppDisPatch();
+     const dispatch = UseAppDisPatch();
 
     const newArticle = {
         id: -1,
@@ -24,7 +25,8 @@ const AddArticleButton = ({ openModal }: IAddArticleButton) => {
         description: '',
         text: '',
         publishingDate: '',
-        isNew: true
+        isNew: true,
+        save: false
     }
 
     const saveData = (data: IArticle) => {
@@ -46,20 +48,27 @@ const AddArticleButton = ({ openModal }: IAddArticleButton) => {
                 <button className={styles.blueButton}
                     type="button" onClick={() => setModalState(true)}>
                     {Labels.ADD_ARTICLE}
-                </button  >
+                </button >
             }
 
             {showModal &&
-                <div id="edit" className={styles.modal}>
-                    <div className={styles.modalContent}>
-                        <div className={styles.modalContent__first}>
-                            <ArticleEdit isEdit={true} article={newArticle} editArticle={saveData} />
+                <>
+                    <div id="edit" className={styles.modal}>
+                        <div className={styles.modalContent}>
+                            <div className={styles.modalContent__first}>
+                                <ArticleEdit isEdit={true} article={newArticle} editArticle={saveData} />
+                            </div>
+                            <div>
+                                <ArticleModalCloseButton closeModal={() => setModalState(false)} />
+                            </div>
+
                         </div>
-                        <div>
-                            <ArticleModalCloseButton closeModal={() => setModalState(false)} />
-                        </div>
+
                     </div>
-                </div>
+                </>
+
+
+
             }
 
             {!isLoggedIn &&

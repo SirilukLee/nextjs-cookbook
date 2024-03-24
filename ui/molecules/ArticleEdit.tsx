@@ -5,7 +5,7 @@ import ArticleText from "../atoms/ArticleText"
 import ArticleModalSaveButton from "../atoms/ArticleModalSaveButton"
 
 const ArticleEdit = ({ article, isEdit, editArticle }: IArticleEdit) => {
-    console.log(article)
+    
     return (
         <>
             <ArticleTitle title={article.title} isEdit={true} />

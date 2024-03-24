@@ -7,7 +7,7 @@ import SubmitButton from '../ui/atoms/submit-button'
 //molecules
 import LoginForm from '../ui/molecules/login-form'
 import { Labels, Placeholders, TestIDs } from '../pages/core/configs'
-
+import '@testing-library/jest-dom';
 
 const testObject = {
     isTextInput: (screen) => screen.getByPlaceholderText(Placeholders.TEXT_INPUT),
@@ -37,28 +37,28 @@ describe('UI inputs must render properly', () => {
         expectation(testObject.isTextInput(screen))
 
         fireEvent.change(input, { target: { value: 'การรำ' } })
-        expect(input).toHaveValue('')
+        expect(input).toHaveDisplayValue('')
 
         const generatedLogin = makeLogin(101)
 
         fireEvent.change(input, { target: { value: generatedLogin } })
-        expect(input).toHaveValue('')
+        expect(input).toHaveDisplayValue('')
 
     })
 
     it('render a password input', () => {
-        render(<PasswordInput />)
+        render(<PasswordInput  onPasswordEnter={(value) => value}/>)
 
         const input = testObject.isPasswordInput(screen)
         expectation(input)
 
         fireEvent.change(input, { target: { value: 'การรำ' } })
-        expect(input).toHaveValue('')
+        expect(input).toHaveDisplayValue('')
 
         const generatedLogin = makeLogin(51)
 
         fireEvent.change(input, { target: { value: generatedLogin } })
-        expect(input).toHaveValue('')
+        expect(input).toHaveDisplayValue('')
     })
     it('render a submit button', () => {
         render(<SubmitButton />)

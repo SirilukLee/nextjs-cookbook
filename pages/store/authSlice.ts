@@ -1,5 +1,5 @@
 import { PayloadAction, createSelector, createSlice } from "@reduxjs/toolkit"
-import { RootState } from '.';
+import { RootState } from './index';
 
 export type Auth = {
     state: boolean;
@@ -41,12 +41,17 @@ export const authSlice = createSlice({
 })
 
 
-
 export default authSlice.reducer
 export const { changeAuthState } = authSlice.actions;
 
-export const selectAuthState = (state: AuthState) => {
-    const authData = state.auth
-    
-    return state.auth;
+export const selectAuthState = (state: RootState) => {
+    //console.log(state)
+    if (typeof state.auth.auth === "string") {
+        return JSON.parse(state.auth.auth).state;
+    } else {
+        return state.auth.auth.state
+    }
+   
 }
+
+

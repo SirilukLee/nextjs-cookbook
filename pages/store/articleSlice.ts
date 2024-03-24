@@ -8,6 +8,7 @@ export type ArticleState = {
     text: string
     publishingDate: string
     isNew : boolean
+    save: boolean
 }
 
 export const INITIAL_STATE: ArticleState = {
@@ -16,7 +17,8 @@ export const INITIAL_STATE: ArticleState = {
    description: "",
    text: "",
    publishingDate: "",
-   isNew: false
+   isNew: false,
+   save: false
 }
 
 const articleSlice = createSlice({

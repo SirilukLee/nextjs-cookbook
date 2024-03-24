@@ -1,4 +1,4 @@
-import { Labels } from '@/pages/core/configs';
+import { Labels } from '../../pages/core/configs';
 import styles from '../../styles/Atoms.module.scss';
 import { IArticle, IArticleActions } from '../ui-types';
 

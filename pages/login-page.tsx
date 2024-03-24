@@ -11,8 +11,6 @@ const LoginPage: NextPage = () => {
             <Provider store={store}>
                 <LoginForm />
             </Provider>
-
-            {/* <Link href="/">Main</Link> */}
         </article>
 
     )

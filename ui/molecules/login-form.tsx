@@ -7,12 +7,12 @@ import { FormEvent, useState } from "react";
 import { UseAppDisPatch } from "../../pages/hooks";
 import { changeAuthState } from "../../pages/store/authSlice"
 import { useRouter } from "next/router"
-import styles from "../../styles/LoginForm.module.scss"
+//import styles from "../../styles/LoginForm.module.scss"
 
 const LoginForm = () => {
     const [login, setLogin] = useState('');
     const [password, setPassword] = useState('')
-    const router = useRouter();
+   const router = useRouter();
 
     const dispatch = UseAppDisPatch();
     const loginService = LoginService.getInstance()
@@ -40,7 +40,7 @@ const LoginForm = () => {
 
     return (
         <section>
-            <form onSubmit={loginAction} className={styles.LoginForm}>
+            <form  >
                 <div>
                     <TextInput id="login" onLoginEnter={loginEnter} />
                 </div>
