@@ -7,7 +7,10 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "jest"
+    "test": "jest",
+    "cypress": "cypress open",
+    "test:e2e": "yarn playwright test",
+    "test:all": "yarn test --coverage && yarn playwright test"
   },
   "dependencies": {
     "@apollo/client": "^3.9.6",
