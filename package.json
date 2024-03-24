@@ -12,6 +12,7 @@
   "dependencies": {
     "@apollo/client": "^3.9.6",
     "@reduxjs/toolkit": "^2.2.1",
+    "@sentry/nextjs": "^7.108.0",
     "@types/styled-components": "^5.1.34",
     "apollo-server": "^3.13.0",
     "axios": "^1.6.8",
