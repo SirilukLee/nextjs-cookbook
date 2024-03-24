@@ -103,20 +103,37 @@
     align-items: center;
     justify-content: space-between;
 
-    div {
+
+    >div {
         display: flex;
         align-items: center;
         padding: 1rem;
         text-decoration: none;
+
+        >div {
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+            text-decoration: none;
+
+            >div {
+                display: flex;
+                // align-items: center;
+                padding: 1rem;
+                text-decoration: none;
+
+            }
+        }
     }
+
+    // div .modalContent__first {
+    //     display: flex;
+    // }
 
     div:last-child .separator {
         display: none;
     }
 
-    div #add {
-        display: block;
-    }
 
 
 }

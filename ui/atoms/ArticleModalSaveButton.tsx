@@ -6,10 +6,11 @@ const ArticleModalSaveButton = ({saveArticle}:{saveArticle: () => void}) => {
     const input = {
         label: Labels.SAVE
     }
-    console.log(saveArticle)
+    //console.log(saveArticle)
 
     return (
-        <button type="submit" className={styles.editButton}>{input.label}</button>
+        <button type="submit" className={styles.editButton}
+        onClick={()=> saveArticle?.()}>{input.label}</button>
     )
 
 }

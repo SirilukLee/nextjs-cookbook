@@ -1,33 +1,33 @@
-import { createSlice , PayloadAction} from '@reduxjs/toolkit';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { RootState } from '.';
 
 export type ArticleState = {
     id: number
-    title:string
-    description : string
+    title: string
+    description: string
     text: string
     publishingDate: string
-    isNew : boolean
+    isNew: boolean
     save: boolean
 }
 
 export const INITIAL_STATE: ArticleState = {
-   id: 0,
-   title: "",
-   description: "",
-   text: "",
-   publishingDate: "",
-   isNew: false,
-   save: false
+    id: 0,
+    title: "",
+    description: "",
+    text: "",
+    publishingDate: "",
+    isNew: false,
+    save: false
 }
 
 const articleSlice = createSlice({
-    name : "article",
+    name: "article",
     reducers: {
-        changeArticleState: ( state: RootState, action: PayloadAction<ArticleState>) => {
+        changeArticleState: (state: RootState, action: PayloadAction<ArticleState>) => {
             const newArticleState = action.payload;
-            state = {...newArticleState}
-           
+            state = { ...newArticleState }
+
             return state;
         }
     },

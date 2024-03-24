@@ -28,11 +28,11 @@ const NavigationBar = ({ navigation }: INavigationParams) => {
                     })
                 }
             </div>
-
-
-            <div id="add">
+            <div className='add'>
                 <AddArticleButton openModal={() => { }} />
             </div>
+
+
         </nav>
     )
 }

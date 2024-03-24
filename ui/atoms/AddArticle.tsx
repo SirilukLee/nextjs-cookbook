@@ -6,17 +6,19 @@ import { useAppSelector ,UseAppDisPatch} from "@/pages/hooks";
 import { selectAuthState } from "../../pages/store/authSlice"
 import styles from "../../styles/Atoms.module.scss"
 import Link from "next/link";
-import { changeArticleState } from "@/pages/store/articleSlice";
+import { changeArticleState, selectArticleState } from "../../pages/store/articleSlice";
 import ArticleEdit from "../molecules/ArticleEdit";
 import ArticleModalCloseButton from "./ArticleModalCloseButton";
+import { useSelector } from "react-redux";
 
 const AddArticleButton = ({ openModal }: IAddArticleButton) => {
     const [buttonLabel, setButtonState] = useState(Labels.SUBMIT);
     const [showModal, setModalState] = useState(false);
     const isLoggedIn = useAppSelector(selectAuthState)
-    console.log(isLoggedIn)
-    // const isLoggedIn = true
-    // const authDataAsString: string = JSON.stringify(authData);
+    // console.log(isLoggedIn)
+
+   // const currentArticle = useSelector(selectArticleState);
+
      const dispatch = UseAppDisPatch();
 
     const newArticle = {
@@ -30,14 +32,20 @@ const AddArticleButton = ({ openModal }: IAddArticleButton) => {
     }
 
     const saveData = (data: IArticle) => {
-        console.log('data to save', data)
+        console.log('data to save', data) 
+        // dispatch(changeArticleState({ ...currentArticle, save: true }))
+
     }
 
     useEffect(() => {
         if (isLoggedIn) {
             setButtonState(Labels.ADD_ARTICLE)
         }
-        dispatch(changeArticleState(newArticle));
+        if (showModal) {
+            console.log(newArticle)
+            dispatch(changeArticleState(newArticle));
+        }
+       
     }, [newArticle]);
 
 

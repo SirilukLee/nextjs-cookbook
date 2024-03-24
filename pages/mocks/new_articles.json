@@ -5,7 +5,6 @@
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",       
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ullamcorper bibendum sollicitudin. Sed molestie non magna ut lobortis. Nunc pretium urna nec bibendum sagittis.Cras neque massa, ultricies eget mollis ut, lacinia vitae velit. Suspendisse turpis neque,",       
         "publishingDate": "2022-05-01",
-        "allowComments": true,
         "status": "public"
     },
     {
@@ -14,7 +13,6 @@
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",       
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ullamcorper bibendum sollicitudin. Sed molestie non magna ut lobortis. Nunc pretium urna nec bibendum sagittis.Cras neque massa, ultricies eget mollis ut, lacinia vitae velit. Suspendisse turpis neque,",       
         "publishingDate": "2022-05-01",
-        "allowComments": true,
         "status": "public"
     },
     {
@@ -24,7 +22,6 @@
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ullamcorper bibendum sollicitudin. Sed molestie non magna ut lobortis. Nunc pretium urna nec bibendum sagittis.Cras neque massa, ultricies eget mollis ut, lacinia vitae velit. Suspendisse turpis neque,",       
         "image": "shorturl.at/hluIO",
         "publishingDate": "2022-05-01",
-        "allowComments": true,
         "status": "public"
     },
     {
@@ -33,7 +30,6 @@
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",       
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ullamcorper bibendum sollicitudin. Sed molestie non magna ut lobortis. Nunc pretium urna nec bibendum sagittis.Cras neque massa, ultricies eget mollis ut, lacinia vitae velit. Suspendisse turpis neque,",       
         "publishingDate": "2022-05-01",
-        "allowComments": true,
         "status": "public"
     }
 ]

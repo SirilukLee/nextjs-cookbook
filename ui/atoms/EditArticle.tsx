@@ -1,19 +1,21 @@
 import { useState } from 'react'
 import { Labels, LocalStorageKeys } from "../../pages/core/configs";
 import styles from '../../styles/Atoms.module.scss';
-import { IArticleActions,IArticle  } from "../ui-types";
+import { IArticleActions, IArticle } from "../ui-types";
 import ArticleEdit from '../molecules/ArticleEdit'
 import ArticleModalCloseButton from './ArticleModalCloseButton';
 import { UseAppDisPatch, useAppSelector } from "../../pages/hooks";
-import { changeArticleState } from '@/pages/store/articleSlice';
+import { changeArticleState, selectArticleState } from '../../pages/store/articleSlice';
+import { useSelector } from 'react-redux';
 
 const EditArticleButton = ({ editArticle, article }: { editArticle: () => void, article: IArticle }) => {
     const [showModal, setModalState] = useState(false);
     const dispatch = UseAppDisPatch();
+    // const currentArticle = useSelector(selectArticleState);
+
 
     const saveArticle = async () => {
-        console.log(article)
-      dispatch(changeArticleState({...article, save:true}))
+        dispatch(changeArticleState({ ...article, save: true }))
     }
 
     return (
@@ -32,7 +34,7 @@ const EditArticleButton = ({ editArticle, article }: { editArticle: () => void, 
                         <div>
                             <ArticleModalCloseButton closeModal={() => setModalState(false)} />
                         </div>
-                        
+
                     </div>
 
                 </div>

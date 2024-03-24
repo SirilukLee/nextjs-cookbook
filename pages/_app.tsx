@@ -11,6 +11,7 @@ import { UseAppDisPatch } from "./hooks";
 // import { store } from "./store";
 import de from "../lang/de.json";
 import en from "../lang/en.json";
+import th from "../lang/th.json"
 import { IntlProvider, createIntl } from "react-intl";
 import { useRouter } from "next/router";
 // export default function App({ Component, pageProps }: AppProps) {
@@ -18,7 +19,8 @@ import { useRouter } from "next/router";
 // }
 const messages: any = {
   de,
-  en
+  en,
+  th
 }
 console.log(messages)
 export default function CookBook({ Component, pageProps }: AppProps) {
