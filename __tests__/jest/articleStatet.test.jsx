@@ -1,4 +1,4 @@
-import articleReducer, { changeArticleState, INITIAL_STATE, ArticleState } from "../pages/store/articleSlice";
+import articleReducer, { changeArticleState, INITIAL_STATE, ArticleState } from "../../pages/store/articleSlice";
 
 describe("Article Slice", () => {
     describe("Article check function", () => {
