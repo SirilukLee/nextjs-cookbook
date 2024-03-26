@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 import NavigationBar from '@/ui/molecules/NavigationBar'
-import styles from "../../styles/layout.module.scss"
+import styles from "../../styles/Layout.module.scss"
 
 
 export default function Layout({ children }: Partial<any>) {
