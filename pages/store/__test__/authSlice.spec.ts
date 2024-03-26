@@ -6,7 +6,7 @@ describe("Auth Slice", ()=> {
     describe("My First Function", ()=> {
         it("should auth the user in the store", ()=> {
             const auth: Auth = {
-                isLoggedIn:true,
+                state:true,
                 token: null, 
                 userProperties: []
             };
