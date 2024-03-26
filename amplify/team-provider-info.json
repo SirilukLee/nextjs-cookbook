@@ -1,0 +1,37 @@
+{
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-nextjscookbook-staging-35958-authRole",
+      "UnauthRoleArn": "arn:aws:iam::590183731832:role/amplify-nextjscookbook-staging-35958-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::590183731832:role/amplify-nextjscookbook-staging-35958-authRole",
+      "Region": "ap-southeast-2",
+      "DeploymentBucketName": "amplify-nextjscookbook-staging-35958-deployment",
+      "UnauthRoleName": "amplify-nextjscookbook-staging-35958-unauthRole",
+      "StackName": "amplify-nextjscookbook-staging-35958",
+      "StackId": "arn:aws:cloudformation:ap-southeast-2:590183731832:stack/amplify-nextjscookbook-staging-35958/50190b80-eb25-11ee-b159-0ab192228e35",
+      "AmplifyAppId": "d27xnp6b346i2m"
+    },
+    "categories": {
+      "auth": {
+        "nextjsCookbook": {}
+      },
+      "function": {
+        "nextjscookbookde339cce": {},
+        "nextjscookbookc98a021d": {}
+      }
+    }
+  },
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-nextjscookbook-dev-101423-authRole",
+      "UnauthRoleArn": "arn:aws:iam::590183731832:role/amplify-nextjscookbook-dev-101423-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::590183731832:role/amplify-nextjscookbook-dev-101423-authRole",
+      "Region": "ap-southeast-2",
+      "DeploymentBucketName": "amplify-nextjscookbook-dev-101423-deployment",
+      "UnauthRoleName": "amplify-nextjscookbook-dev-101423-unauthRole",
+      "StackName": "amplify-nextjscookbook-dev-101423",
+      "StackId": "arn:aws:cloudformation:ap-southeast-2:590183731832:stack/amplify-nextjscookbook-dev-101423/f3b78160-eb1e-11ee-8b1d-06df98197b1f",
+      "AmplifyAppId": "d27xnp6b346i2m"
+    }
+  }
+}
