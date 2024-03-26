@@ -12,10 +12,10 @@ const Home: NextPage = () => {
         <div>
             <h1>Hello there ! This is the main page of CookBook</h1>
             <h2>{title}</h2>
-            <button type='button'
+            {/* <button type='button'
                 onClick={() => { throw new Error("Sentry Frontend Error") }}>
                 Throw Error
-            </button>
+            </button> */}
         </div>
 
 

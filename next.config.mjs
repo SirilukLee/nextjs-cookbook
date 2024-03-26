@@ -13,9 +13,9 @@ const nextConfig = {
   //   }
   //   return config // do not forget to return this object 
   // },
-  env: {
-    SECRET: process.env.SECRET
-  }
+  // env: {
+  //   SECRET: process.env.SECRET
+  // }
 };
 
 export default withSentryConfig(nextConfig, {
