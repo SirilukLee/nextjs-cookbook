@@ -1,5 +1,5 @@
 const { ApolloServer, gql } = require('apollo-server');
-const users = require('../pages/mocks/users.json')
+const users = require('../mocks/users.json')
 console.log(users)
 const typeDefs = gql`
 type User {

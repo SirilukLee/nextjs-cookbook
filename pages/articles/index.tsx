@@ -9,7 +9,6 @@ import axios from 'axios'
 const ListPage: NextPage = ({ data, notFound }: IListPage) => {
     const isLoggedIn = useAppSelector(selectAuthState);
 
-
     return (
         <section>
             <h1>Articles list</h1>

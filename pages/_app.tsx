@@ -1,4 +1,5 @@
-import { Amplify, ResourcesConfig } from "@aws-amplify/core";
+import { Amplify } from "@aws-amplify/core";
+import config from "./aws-exports";
 import "@/styles/globals.scss";
 import type { AppProps, NextWebVitalsMetric } from "next/app";
 import { wrapper } from "../store";
@@ -19,17 +20,9 @@ import { useRouter } from "next/router";
 //   return <Component {...pageProps} />;
 // }
 
-interface AmplifyConfig extends ResourcesConfig {
-  ssr?: boolean;
-}
-// Your configuration
-const config: AmplifyConfig = {
-  ...Amplify.resourcesConfig,
-  ssr: true
-};
-
-// Call Amplify.configure() with your config
-Amplify.configure(config);
+// Amplify.configure({
+//   ...config , ssr:true
+// })
 
 const messages: any = {
   de,
@@ -70,7 +63,6 @@ export default function CookBook({ Component, pageProps }: AppProps) {
     const authFromStorage = getFromStorageByKey(LocalStorageKeys.LOGIN)
 
     if (authFromStorage) {
-      // console.log(authFromStorage)
       store.dispatch(changeAuthState(authFromStorage));
     }
 

@@ -6,7 +6,7 @@ import PasswordInput from '../../ui/atoms/PasswordInput'
 import SubmitButton from '../../ui/atoms/SubmitButton'
 //molecules
 import LoginForm from '../../ui/molecules/LoginForm'
-import { Labels, Placeholders, TestIDs } from '../../pages/core/configs'
+import { Labels, Placeholders, TestIDs } from '../../core/configs'
 import '@testing-library/jest-dom';
 
 const testObject = {
