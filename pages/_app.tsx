@@ -1,5 +1,4 @@
 import { Amplify, ResourcesConfig } from "@aws-amplify/core";
-//import config from "../aws-exports";
 import "@/styles/globals.scss";
 import type { AppProps, NextWebVitalsMetric } from "next/app";
 import { wrapper } from "../store";
