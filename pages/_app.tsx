@@ -1,5 +1,5 @@
 import { Amplify } from "@aws-amplify/core";
-//import config from "../aws-exports";
+import config from "../aws-exports";
 import "@/styles/globals.scss";
 import type { AppProps, NextWebVitalsMetric } from "next/app";
 import { wrapper } from "../store";
@@ -19,9 +19,11 @@ import { useRouter } from "next/router";
 // export default function App({ Component, pageProps }: AppProps) {
 //   return <Component {...pageProps} />;
 // }
-// Amplify.configure({
-//   ...config as any, ssr: true
-// })
+
+
+Amplify.configure({
+  ...config
+})
 
 const messages: any = {
   de,
