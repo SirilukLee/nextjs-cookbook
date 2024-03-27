@@ -1,11 +1,11 @@
 import { useState } from 'react'
-import { Labels, LocalStorageKeys } from "../../pages/core/configs";
+import { Labels, LocalStorageKeys } from "../../core/configs";
 import styles from '../../styles/Atoms.module.scss';
 import { IArticleActions, IArticle } from "../ui-types";
 import ArticleEdit from '../molecules/ArticleEdit'
 import ArticleModalCloseButton from './ArticleModalCloseButton';
-import { UseAppDisPatch, useAppSelector } from "../../pages/hooks";
-import { changeArticleState, selectArticleState } from '../../pages/store/articleSlice';
+import { UseAppDisPatch, useAppSelector } from "../../hooks";
+import { changeArticleState, selectArticleState } from '../../store/articleSlice';
 import { useSelector } from 'react-redux';
 
 const EditArticleButton = ({ editArticle, article }: { editArticle: () => void, article: IArticle }) => {

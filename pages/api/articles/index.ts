@@ -1,5 +1,5 @@
 import  type { NextApiRequest , NextApiResponse } from 'next'
-import { getMock } from "../../mocks";
+import { getMock } from "../../../mocks";
 
 export default function handler (
     req: NextApiRequest,

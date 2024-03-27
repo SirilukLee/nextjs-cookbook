@@ -4,7 +4,7 @@ import { IUser, } from './types'
 import { loginType, UserBuilderMethod } from './configuration'
 import { ApplicationUser } from './login-builder'
 import { updateStorage } from './local-storage'
-import { LocalStorageKeys } from '../../../pages/core/configs'
+import { LocalStorageKeys } from '../../../core/configs'
 
 class LoginService {
     private static instance: LoginService;

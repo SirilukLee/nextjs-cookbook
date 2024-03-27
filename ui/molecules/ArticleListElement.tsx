@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Labels, LocalStorageKeys } from '../../pages/core/configs'
+import { Labels, LocalStorageKeys } from '../../core/configs'
 import styles from '../../styles/Atoms.module.scss';
 import ArticleDate from '../atoms/ArticleDate'
 import ArticleDescription from '../atoms/ArticleDescription'

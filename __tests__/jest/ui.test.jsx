@@ -1,11 +1,11 @@
 import React from 'react'
 import { fireEvent, render, screen } from '@testing-library/react'
 //Atoms
-import TextInput from '../../ui/atoms/text-input'
-import PasswordInput from '../../ui/atoms/password-input'
-import SubmitButton from '../../ui/atoms/submit-button'
+import TextInput from '../../ui/atoms/TextInput'
+import PasswordInput from '../../ui/atoms/PasswordInput'
+import SubmitButton from '../../ui/atoms/SubmitButton'
 //molecules
-import LoginForm from '../../ui/molecules/login-form'
+import LoginForm from '../../ui/molecules/LoginForm'
 import { Labels, Placeholders, TestIDs } from '../../pages/core/configs'
 import '@testing-library/jest-dom';
 

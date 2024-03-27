@@ -1,10 +1,10 @@
 import { useRouter } from 'next/router'
 import { useEffect, useState, useMemo } from 'react'
-import { ArticleDataService, IArticle } from './core/articles-data.service'
-import { BurgerDirector } from './core/burger-director'
-import { BurgerBuilder } from './core/burger-builder'
-import { IStrategy, Kitchen } from './core/burger-strategy'
-import { StrategiesNames, Strategies } from './core/burger-config'
+import { ArticleDataService, IArticle } from '../core/articles-data.service'
+import { BurgerDirector } from '../core/burger-director'
+import { BurgerBuilder } from '../core/burger-builder'
+import { IStrategy, Kitchen } from '../core/burger-strategy'
+import { StrategiesNames, Strategies } from '../core/burger-config'
 
 
 const Recipe = ({ initialData }: { initialData: Partial<any> }) => {

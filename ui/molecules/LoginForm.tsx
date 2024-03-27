@@ -1,11 +1,11 @@
-import TextInput from "../atoms/text-input";
-import PasswordInput from "../atoms/password-input";
-import SubmitButton from "../atoms/submit-button";
-import { TestIDs } from "../../pages/core/configs";
+import TextInput from "../atoms/TextInput";
+import PasswordInput from "../atoms/PasswordInput";
+import SubmitButton from "../atoms/SubmitButton";
+import { TestIDs } from "../../core/configs";
 import { LoginService } from "../../pages/api/core/login.service";
 import { FormEvent, useState } from "react";
-import { UseAppDisPatch } from "../../pages/hooks";
-import { changeAuthState } from "../../pages/store/authSlice"
+import { UseAppDisPatch } from "../../hooks";
+import { changeAuthState } from "../../store/authSlice"
 import { useRouter } from "next/router"
 import styles from "../../styles/LoginForm.module.scss"
 

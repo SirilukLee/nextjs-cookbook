@@ -1,8 +1,8 @@
 import { useState } from "react"
 import styles from "../../styles/Atoms.module.scss"
 import { useSelector } from "react-redux";
-import { changeArticleState, selectArticleState } from "../../pages/store/articleSlice";
-import { UseAppDisPatch } from "../../pages/hooks";
+import { changeArticleState, selectArticleState } from "../../store/articleSlice";
+import { UseAppDisPatch } from "../../hooks";
 
 const AritcleDescription = ({ description, isEdit }: { description: string, isEdit: boolean }) => {
     const [value, setValue] = useState(description)

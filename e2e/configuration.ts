@@ -1,4 +1,4 @@
-import { getMock} from "../pages/mocks"
+import { getMock} from "../mocks"
 
 enum Configuration {
     HOST = 'http://localhost:3000'

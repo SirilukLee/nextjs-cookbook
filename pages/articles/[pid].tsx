@@ -5,7 +5,7 @@ import ArticleDate from "@/ui/atoms/ArticleDate";
 import ArticleText from "@/ui/atoms/ArticleText";
 import DeleteArticleButton from "@/ui/atoms/DeleteArticle";
 import EditArticleButton from "@/ui/atoms/EditArticle";
-import { selectAuthState } from  "../store/authSlice";
+import { selectAuthState } from  "../../store/authSlice";
 import styles from "../../styles/Article.module.scss";
 import BackToListButton from "../../ui/atoms/BackToList";
 import { useRouter } from 'next/router';

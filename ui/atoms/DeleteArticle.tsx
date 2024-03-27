@@ -1,4 +1,4 @@
-import { Labels, LocalStorageKeys } from "../../pages/core/configs";
+import { Labels, LocalStorageKeys } from "../../core/configs";
 import styles from '../../styles/Atoms.module.scss';
 import { IArticleActions } from "../ui-types";
 

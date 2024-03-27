@@ -2,7 +2,7 @@ import { Dispatch, configureStore, ThunkAction, combineReducers } from "@reduxjs
 import authReducer, { AuthState } from "./authSlice";
 import { createWrapper } from "next-redux-wrapper";
 import authSlice from "./authSlice";
-import { LoginService } from "../api/core/login.service";
+import { LoginService } from "../pages/api/core/login.service";
 import articleReduce from "./articleSlice"
 
 const apiCallMiddleWare: any = (store: RootState) =>

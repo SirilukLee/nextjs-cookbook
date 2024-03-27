@@ -1,4 +1,4 @@
-import { getMock } from "../../../pages/mocks";
+import { getMock } from "../../..//mocks";
 import { generateToken } from "./generate-token";
 import { IUser, ILoginStrategy, ILoginStrategyGQL } from './types'
 import client from "../../../apollo-client"

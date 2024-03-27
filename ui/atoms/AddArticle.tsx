@@ -1,12 +1,12 @@
 
 import { useEffect, useState } from "react";
 import { IAddArticleButton, IArticle } from "../ui-types";
-import { Labels , LocalStorageKeys} from "@/pages/core/configs";
-import { useAppSelector ,UseAppDisPatch} from "@/pages/hooks";
-import { selectAuthState } from "../../pages/store/authSlice"
+import { Labels , LocalStorageKeys} from "../../core/configs";
+import { useAppSelector ,UseAppDisPatch} from "../../hooks";
+import { selectAuthState } from "../../store/authSlice"
 import styles from "../../styles/Atoms.module.scss"
 import Link from "next/link";
-import { changeArticleState, selectArticleState } from "../../pages/store/articleSlice";
+import { changeArticleState, selectArticleState } from "../../store/articleSlice";
 import ArticleEdit from "../molecules/ArticleEdit";
 import ArticleModalCloseButton from "./ArticleModalCloseButton";
 import { useSelector } from "react-redux";

@@ -1,5 +1,5 @@
 import authSlice, { changeAuthState, INITIAL_STATE, AuthState, Auth
-} from "../../pages/store/authSlice";
+} from "../../store/authSlice";
 
 
 describe("Auth Slice", ()=> {

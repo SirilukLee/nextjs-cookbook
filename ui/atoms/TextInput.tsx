@@ -1,6 +1,6 @@
 import { ChangeEvent, useState } from 'react'
-import { Placeholders } from "../../pages/core/configs";
-import { isLetter } from '../../pages/core/utils';
+import { Placeholders } from "../../core/configs";
+import { isLetter } from '../../core/utils';
 
 
 const TextInput = ({ onLoginEnter, id }: any) => {

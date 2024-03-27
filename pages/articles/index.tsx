@@ -1,8 +1,8 @@
 import type { NextPage } from 'next'
 import ArticleListElement from '../../ui/molecules/ArticleListElement'
 import { Fragment } from 'react'
-import { selectAuthState } from '../store/authSlice'
-import { useAppSelector } from '../hooks'
+import { selectAuthState } from '../../store/authSlice'
+import { useAppSelector } from '../../hooks'
 import { IListPage } from '@/ui/ui-types'
 import axios from 'axios'
 

@@ -1,4 +1,4 @@
-import { Labels } from "../../pages/core/configs";
+import { Labels } from "../../core/configs";
 
 const SubmitButton = (id:any) => {
     const input = {
