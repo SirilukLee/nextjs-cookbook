@@ -3,7 +3,7 @@ import "@/styles/globals.scss";
 import type { AppProps, NextWebVitalsMetric } from "next/app";
 import { wrapper } from "../store";
 import { Provider } from "react-redux";
-import Layout from "../../components/layout";
+import Layout from "../components/layout";
 import { useEffect } from "react";
 import { getFromStorageByKey } from "./api/core/local-storage";
 import { LocalStorageKeys } from "../core/configs";
