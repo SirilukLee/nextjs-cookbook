@@ -21,7 +21,7 @@ import { useRouter } from "next/router";
 // }
 
 Amplify.configure({
-  ...config, ssr: true
+  ...config, ssr: false
 })
 
 const messages: any = {
