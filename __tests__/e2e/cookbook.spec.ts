@@ -6,7 +6,7 @@ import { Configuration, expectations } from './configuration'
 // });
 
 test.beforeEach(async ({ page }) => {
-    await page.goto(Configuration.HOST + '/login');
+    await page.goto(Configuration.HOST + '/login-page');
     await page.locator('#login').fill(expectations.auth.login);
     await page.locator('#password').fill(expectations.auth.password)
     await page.locator('#submit-login').click();

@@ -31,7 +31,7 @@ const messages: any = {
 }
 
 export function reportWebVitals(metric: NextWebVitalsMetric) {
-  console.log(metric)
+  //console.log(metric)
 
   // const body = JSON.stringify(metric)
   // const url = 'https://example.com/analytics'

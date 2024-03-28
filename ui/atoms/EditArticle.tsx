@@ -15,6 +15,7 @@ const EditArticleButton = ({ editArticle, article }: { editArticle: () => void, 
 
 
     const saveArticle = async () => {
+
         dispatch(changeArticleState({ ...article, save: true }))
     }
 

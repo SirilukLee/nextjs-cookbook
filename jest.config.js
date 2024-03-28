@@ -11,7 +11,7 @@ module.exports = {
       '^.+\\.(jpg|jpeg|png|gif|webp|avif|svg)$': '<rootDir>/__mocks__/fileMock.js',
 
    },
-   testPathIgnorePatterns: ['<rootDir>/node_modules/', '<rootDir>/.next/','<rootDir>/e2e/'],
+   testPathIgnorePatterns: ['<rootDir>/node_modules/', '<rootDir>/.next/','<rootDir>/__tests__/e2e/'],
    testEnvironment: 'jsdom',
    transform: { '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', { presets: ['next/babel'] }], },
    transformIgnorePatterns: [

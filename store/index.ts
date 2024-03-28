@@ -11,6 +11,7 @@ const apiCallMiddleWare: any = (store: RootState) =>
             console.log("action", { store, action });
             let data = null;
             if (action.type === 'article/changeArticleState' && action.payload.save) {
+                console.log('ok')
                 data = action.payload
             }
             LoginService.getInstance().anyAPICall();

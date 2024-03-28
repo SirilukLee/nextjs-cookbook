@@ -16,8 +16,7 @@ const AddArticleButton = ({ openModal }: IAddArticleButton) => {
     const [showModal, setModalState] = useState(false);
     const isLoggedIn = useAppSelector(selectAuthState)
     // console.log(isLoggedIn)
-
-   // const currentArticle = useSelector(selectArticleState);
+    //const currentArticle = useSelector(selectArticleState);
 
      const dispatch = UseAppDisPatch();
 
@@ -32,8 +31,8 @@ const AddArticleButton = ({ openModal }: IAddArticleButton) => {
     }
 
     const saveData = (data: IArticle) => {
-        console.log('data to save', data) 
-        // dispatch(changeArticleState({ ...currentArticle, save: true }))
+       
+       // dispatch(changeArticleState({ ...currentArticle, save: true }))
 
     }
 

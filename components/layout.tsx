@@ -28,7 +28,7 @@ export default function Layout({ children }: Partial<any>) {
 
     const router = useRouter();
     const meta = navigation.find(element => element.link === router.pathname)
-    console.log('meta', meta)
+    //console.log('meta', meta)
 
     // const isCopy = route === '/articles' ? 'Copy': ''
 
